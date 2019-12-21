@@ -2,8 +2,6 @@
 
 > matplotlib, python
 
-[toc]
-
 # &sect; font
 
 ## &para; 中文字体显示
