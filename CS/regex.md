@@ -149,7 +149,7 @@ re.findall(r'\\w', r'\w\x\b') # ['\\w']
 | `\uhhhh` | 匹配 Unicode 值为 `hhhh` （四个十六进制数字）的字符。        |
 | `\`      | 对于那些通常被认为字面意义的字符来说，表示下一个字符具有特殊用处，并且不会被按照字面意义解释。例如 `/b/` 匹配字符 'b'。在 b 前面加上一个反斜杠，即使用 `/\b/`，则该字符变得特殊，以为这匹配一个单词边界。*或*对于那些通常特殊对待的字符，表示下一个字符不具有特殊用途，会被按照字面意义解释。例如，* 是一个特殊字符，表示匹配某个字符 0 或多次，如 `/a*/` 意味着 0 或多个 "a"。 为了匹配字面意义上的 `*` ，在它前面加上一个反斜杠，例如，`/a\*/`匹配 'a*'。 |
 
-### &phone; `javascript`
+### &rArr; `javascript`
 
 ```javascript
 var s = "B2 is the suite number."
@@ -157,7 +157,7 @@ s.match(/\D/)
 // expected output: ["B", index: 0, input: "B2 is the suite number.", groups: undefined]
 ```
 
-### &phone; `python`
+### &rArr; `python`
 
 ```python
 import re
@@ -172,9 +172,9 @@ re.match(r'\D', "B2 is the suite number.")
 | `[xyz]`  | 一个字符集合，也叫字符组。匹配集合中的任意一个字符。你可以使用连字符'-'指定一个范围。例如，[abcd] 等价于 [a-d]，匹配"brisket"中的'b'和"chop"中的'c'。 |
 | `[^xyz]` | 一个反义或补充字符集，也叫反义字符组。也就是说，它匹配任意不在括号内的字符。你也可以通过使用连字符 '-' 指定一个范围内的字符。例如，`[^abc]` 等价于 `[^a-c]。` 第一个匹配的是 "bacon" 中的'o' 和 "chop" 中的 'h'。 |
 
-### &phone; `javascript`
+### &rArr; `javascript`
 
-### &phone; `python`
+### &rArr; `python`
 
 ## &sect; 边界（Boundaries）
 
@@ -185,9 +185,9 @@ re.match(r'\D', "B2 is the suite number.")
 | `\b` | 匹配一个零宽单词边界（zero-width word boundary），如一个字母与一个空格之间。 （不要和 `[\b]` 混淆）例如，`/\bno/` 匹配 "at noon" 中的 "no"，`/ly\b/` 匹配 "possibly yesterday." 中的 "ly"。 |
 | `\B` | 匹配一个零宽非单词边界（zero-width non-word boundary），如两个字母之间或两个空格之间。例如，`/\Bon/` 匹配 "at noon" 中的 "on"，`/ye\B/` 匹配 "possibly yesterday." 中的 "ye"。 |
 
-### &phone; `javascript`
+### &rArr; `javascript`
 
-### &phone; `python`
+### &rArr; `python`
 
 ## &sect; 分组（Grouping）与反向引用（back references）
 
@@ -197,9 +197,9 @@ re.match(r'\D', "B2 is the suite number.")
 | `\n`     | `n` 是一个正整数。一个反向引用（back reference），指向正则表达式中第 n 个括号（从左开始数）中匹配的子字符串。例如，`/apple(,)\sorange\1/` 匹配 "apple, orange, cherry, peach." 中的 "apple,orange,"。一个更全面的例子在该表格下面。 |
 | `(?:x)`  | 匹配 `x` 不会捕获匹配项。这被称为非捕获括号（non-capturing parentheses）。匹配项不能够从结果数组的元素 `[1], ..., [n]` 或已被定义的 `RegExp` 对象的属性 `$1, ..., $9` 再次访问到。 |
 
-### &phone; `javascript`
+### &rArr; `javascript`
 
-### &phone; `python`
+### &rArr; `python`
 
 ## &sect; 数量词（Quantifiers）
 
@@ -214,9 +214,9 @@ re.match(r'\D', "B2 is the suite number.")
 | `x{n,}`      | `n` 是一个正整数。前面的模式 x 连续出现至少 n 次时匹配。例如，`/a{2,}/` 不匹配 "candy" 中的 "a"，但是匹配 "caandy" 和 "caaaaaaandy." 中所有的 "a"。 |
 | `x{n,m}`     | `n` 和 `m` 为正整数。前面的模式 x 连续出现至少 n 次，至多 m 次时匹配。例如，`/a{1,3}/` 不匹配 "cndy"，匹配 "candy," 中的 "a"，"caandy," 中的两个 "a"，匹配 "caaaaaaandy" 中的前面三个 "a"。注意，当匹配 "caaaaaaandy" 时，即使原始字符串拥有更多的 "a"，匹配项也是 "aaa"。 |
 
-### &phone; `javascript`
+### &rArr; `javascript`
 
-### &phone; `python`
+### &rArr; `python`
 
 ## &sect; 断言（Assertions）
 
@@ -229,9 +229,9 @@ re.match(r'\D', "B2 is the suite number.")
 | `(?<=y)x` | `x`只有在`y`后面才匹配。 `/(?<=\$)\d+/.exec('Benjamin Franklin is on the $100 bill')  // ["100"]` |
 | `(?<!y)x` | `x`只有不在`y`后面才匹配。`/(?<!\$)\d+/.exec('it’s is worth about €90') // ["90"]` |
 
-### &phone; `javascript`
+### &rArr; `javascript`
 
-### &phone; `python`
+### &rArr; `python`
 
 # 参考
 

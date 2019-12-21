@@ -40,7 +40,7 @@ Header  Place holder    Fill in our Binary   Result
 
 读取文件时只要按照 utf-8 的编码方式解析出 Unicode 字符并对应字符表就可以得到相应字符了。
 
-### &phone; Python3 中的应用
+### &rArr; Python3 中的应用
 
 ```python
 >>> hex(ord('汉')) # 输出为 Unicode 编码

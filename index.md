@@ -17,6 +17,10 @@
 - [git 工具](CS/git-tools)
 - [git 资源](CS/git-resources)
 
+## &para; 文件编码
+
+- [文件编码](CS/file_format.md)
+
 ## &para; 正则表达式
 
 - [Regex](CS/regex)
