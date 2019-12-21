@@ -86,6 +86,35 @@ s.match(/yes[^]*day/);
 
 ## &sect; python
 
+### 基本语法
+
+```python
+import re
+
+# 从首位匹配
+pattern = re.compile(r'^\w+')
+r1 = re.match(r'^\w+', 'Hello world')
+r2 = re.match(pattern, 'Hello world')
+
+# 搜索第一个
+r3 = re.search(r'(get)', 'how to get the score')
+r3.group() # 'get'
+
+# 寻找所有的匹配项
+r4 = re.findall(r'\w+', 'I, the robot') # r4 = ['I', 'the', 'robot']
+
+# 正则表达式字符串之前必加 `r`
+# 对于 `\x` 而言，代表了16进制，后面需要跟两个16进制数
+re.compile('\\x') # error: incomplete escape \x at position 0
+re.findall('\\x', r'\x56\xea') # error: incomplete escape \x at position 0
+re.findall(r'\\x', r'\x56\xea') # ['\\x', '\\x']
+
+re.findall('\w', r'\w\x\b') # ['w', 'x', 'b']
+re.findall('\\w', r'\w\x\b') # ['w', 'x', 'b']
+re.findall(r'\w', r'\w\x\b') # ['w', 'x', 'b']
+re.findall(r'\\w', r'\w\x\b') # ['\\w']
+```
+
 # &para; 正则表达式中特殊字符的含义[^1]
 
 > 以下字符说明内容摘自 MDN, 使用语言为 javascript
