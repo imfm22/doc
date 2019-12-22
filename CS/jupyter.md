@@ -123,4 +123,4 @@ import seaborn as sns
 sns.set(context='paper', style='darkgrid', rc={'figure.facecolor':'white'}, font_scale=1.2)
 ```
 
-[^1]: https://www.reddit.com/r/Python/comments/4z6znd/dark_jupyter_notebook_themes_that_dont_make_plot/, "Dark Jupyter Notebook themes that don't make plot axes illegible?"
+[^1]: https://www.reddit.com/r/Python/comments/4z6znd/dark_jupyter_notebook_themes_that_dont_make_plot/ "Dark Jupyter Notebook themes that don't make plot axes illegible?"

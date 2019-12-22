@@ -98,4 +98,6 @@ tree ~/.ssh
 
 参见[^1]
 
-[^1]: https://blog.csdn.net/weixin_42232749/article/details/81624156, "linux系统之间ssh远程连接图形用户界面"
+# 参考
+
+[^1]: https://blog.csdn.net/weixin_42232749/article/details/81624156 "linux系统之间ssh远程连接图形用户界面"

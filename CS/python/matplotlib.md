@@ -106,4 +106,4 @@ plt.legend(prop=font) # legend 使用 prop
 plt.show()
 ```
 
-[^1]: https://www.sail.name/2018/06/09/chinese-display-cube-in-matplotlib-at-ubuntu/, "matplotlib中文显示为方框(ubuntu)"
+[^1]: https://www.sail.name/2018/06/09/chinese-display-cube-in-matplotlib-at-ubuntu/ "matplotlib中文显示为方框(ubuntu)"

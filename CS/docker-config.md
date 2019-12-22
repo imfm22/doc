@@ -8,7 +8,7 @@
 
 ## &para; 1.1 linux
 
-### &star; ubuntu[^1]
+### &rArr; ubuntu[^1]
 
 ```bash
 # step 1: 安装必要的一些系统工具
@@ -31,7 +31,7 @@ sudo apt-get -y install docker-ce
 # sudo apt-get -y install docker-ce=[VERSION]
 ```
 
-### &star; manjaro
+### &rArr; manjaro
 
 ```bash
 yay -S docker
@@ -143,6 +143,8 @@ url: http://hub-mirror.c.163.com
 
 url: https://registry.docker-cn.com
 
-[^1]: https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.1daf1991aLpZGN, "阿里云 docker-ce 安装指南"
-[^2]: https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors, "阿里云镜像加速器"
-[^3]: https://blog.51cto.com/12924846/2345420, "docker 系列之镜像加速"
+# 参考
+
+[^1]: https://yq.aliyun.com/articles/110806?spm=5176.8351553.0.0.1daf1991aLpZGN "阿里云 docker-ce 安装指南"
+[^2]: https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors "阿里云镜像加速器"
+[^3]: https://blog.51cto.com/12924846/2345420 "docker 系列之镜像加速"

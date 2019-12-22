@@ -1,8 +1,12 @@
 # 正则表达式
 
-# &para; 不同语言中的正则表达式
+# &sect; 不同语言中的正则表达式
 
-## &sect; javascript
+## Resources
+
+- [RegexBuddy](https://www.regular-expressions.info/quickstart.html)
+
+## &para; javascript
 
 ### 基本参数
 
@@ -15,9 +19,7 @@ RegExp(pattern [, flags])
 
 其中：
 
-- `pattern`
-
-  正则表达式的文本。
+- `pattern`: 正则表达式的文本。
 
 - `flags`: 如果指定，标志可以具有以下值的任意组合
   - `g`: 全局匹配;找到所有匹配，而不是在第一个匹配后停止
@@ -84,7 +86,7 @@ s.match(/yes[^]*day/);
 // Returns 'yes\nmake my day'
 ```
 
-## &sect; python
+## &para; python
 
 ### 基本语法
 
@@ -113,9 +115,17 @@ re.findall('\w', r'\w\x\b') # ['w', 'x', 'b']
 re.findall('\\w', r'\w\x\b') # ['w', 'x', 'b']
 re.findall(r'\w', r'\w\x\b') # ['w', 'x', 'b']
 re.findall(r'\\w', r'\w\x\b') # ['\\w']
+
+# 替换字符
+re.sub(r'(\w+) (\w+)', r'\2)
 ```
 
-# &para; 正则表达式中特殊字符的含义[^1]
+## &para; vim
+
+```vim
+```
+
+# &sect; 正则表达式中特殊字符的含义[^1]
 
 > 以下字符说明内容摘自 MDN, 使用语言为 javascript
 
@@ -126,7 +136,7 @@ re.findall(r'\\w', r'\w\x\b') # ['\\w']
 - [数量词（Quantifiers）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#quantifiers)
 - [断言（Assertions）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp#assertions)
 
-## &sect; 字符类别（Character Classes）
+## &para; 字符类别（Character Classes）
 
 | 字符     | 含义                                                         |
 | :------- | :----------------------------------------------------------- |
@@ -165,7 +175,7 @@ re.match(r'\D', "B2 is the suite number.")
 # expected output: <re.Match object; span=(0, 1), match='B'>
 ```
 
-## &sect; 字符集合（Character Sets）
+## &para; 字符集合（Character Sets）
 
 | 字符     | 含义                                                         |
 | :------- | :----------------------------------------------------------- |
@@ -176,7 +186,7 @@ re.match(r'\D', "B2 is the suite number.")
 
 ### &rArr; `python`
 
-## &sect; 边界（Boundaries）
+## &para; 边界（Boundaries）
 
 | 字符 | 含义                                                         |
 | :--- | :----------------------------------------------------------- |
@@ -189,7 +199,7 @@ re.match(r'\D', "B2 is the suite number.")
 
 ### &rArr; `python`
 
-## &sect; 分组（Grouping）与反向引用（back references）
+## &para; 分组（Grouping）与反向引用（back references）
 
 | 字符     | 含义                                                         |
 | :------- | :----------------------------------------------------------- |
@@ -201,7 +211,15 @@ re.match(r'\D', "B2 is the suite number.")
 
 ### &rArr; `python`
 
-## &sect; 数量词（Quantifiers）
+```python
+s = 'abc xyz'
+# 捕获并替换
+re.sub(r'(\w+) (\w+)', r'\2, \1', s) # 'xyz, abc'
+re.sub(r'(\w+) (\w+)', '\\2, \\1', s) # 'xyz, abc'
+re.sub(r'(?:\w+) (\w+)', r'\2, \1', s) # error: invalid group reference 2 at position 1
+```
+
+## &para; 数量词（Quantifiers）
 
 | 字符         | 含义                                                         |
 | :----------- | :----------------------------------------------------------- |
@@ -218,7 +236,7 @@ re.match(r'\D', "B2 is the suite number.")
 
 ### &rArr; `python`
 
-## &sect; 断言（Assertions）
+## &para; 断言（Assertions）
 
 > 下面所有断言均只匹配`x`，`y`不参与匹配
 
@@ -235,4 +253,4 @@ re.match(r'\D', "B2 is the suite number.")
 
 # 参考
 
-[^1]: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp', '[MDN] RegExp'
+[^1]: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp' '[MDN] RegExp'

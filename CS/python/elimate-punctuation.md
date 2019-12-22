@@ -83,4 +83,4 @@ s ="string. With. Punctuation?"
 s = re.sub(r'[^\w\s]','',s)
 ```
 
-[^1]: https://blog.csdn.net/chihwei_hsu/article/details/81604272, "Python string 去掉标点符号 最佳实践"
+[^1]: https://blog.csdn.net/chihwei_hsu/article/details/81604272 "Python string 去掉标点符号 最佳实践"
