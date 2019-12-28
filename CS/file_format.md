@@ -111,7 +111,12 @@ Header  Place holder    Fill in our Binary   Result
 
 读取文件时只要按照 UTF-8 的编码方式解析出 Unicode 字符并对应字符表就可以得到相应字符了。
 
-### &rArr; Python3 中的应用
+# &sect; 实际应用案例
+
+## &para; Python3 中的应用
+
+Python3 中默认的 str 类型的字符串在内存中是以 Unicode 进行编码的，
+传输或者存储时使用字节 byte。
 
 ```python
 >>> hex(ord('汉')) # 输出为 Unicode 编码
@@ -138,12 +143,26 @@ b'\xf0\x9f\x98\x8a'
 1
 ```
 
+## &para; Windows Console 字符显示问题
+
+使用 WSL Ubuntu 18 之后，调整字体为 Monaco 之后，进入 vim 界面之后，字体依然变回了`新宋体`
+
+[WSL 中字体意外变化的解决方法](https://blog.csdn.net/MobiuX/article/details/82194028A)
+
+进入 `HKEY_CURRENT_USER\Console\C:_Program Files_WindowsApps_CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2018.817.0_x64__79rhkp1fndgsc_ubuntu1804.exe`, 新增 `CodePage`, 其值取 （`DWORD` 类型、值 `0x01b5`）
+
+[CodePage(标准代码页)列表](https://blog.csdn.net/jianggujin/article/details/80325461)
+
+具体内容参考文献[^5]
+
 # 参考
 
 [^1]: https://stackoverflow.com/questions/643694/what-is-the-difference-between-UTF-8-and-unicode 'The difference between unicode and UTF-8'
 [^2]: https://www.zhihu.com/question/52346583 '计算机中为何不直接使用 UTF-8 编码进行存储而要使用 Unicode 再转换成 UTF-8 ？'
 [^3]: https://en.wikipedia.org/wiki/Unicode 'Wikipedia, Unicode'
 [^4]: https://www.zhihu.com/question/19677619 'GB2312、GBK、GB18030 这几种字符集的主要区别是什么？'
+[^5]: https://www.cnblogs.com/hanford/p/6113359.html 'Windows代码页、区域'
+[^6]: https://www.cnblogs.com/hanford/category/915047.html 'Windows 下的编码'
 
 ## GB2312、GBK、GB18030 详解[扩展阅读]
 

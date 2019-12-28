@@ -122,6 +122,7 @@ re.sub(r'(\w+) (\w+)', r'\2, \1', 'abc xyz') # 'xyz, abc'
 
 ## &para; vim
 
+vim 中的正则表达式应用在符号上多用转义符[^2]。如 `+` &rarr; `\+`。
 ```vim
 :%s/```\(\w\+\)/\1/g  # 全文搜索 ```(\w+) 的模式, 并替换成捕获的第一个括号里的值
 ```
@@ -255,3 +256,4 @@ re.sub(r'(?:\w+) (\w+)', r'\2, \1', s) # error: invalid group reference 2 at pos
 # 参考
 
 [^1]: 'https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp' '[MDN] RegExp'
+[^2]: 'http://vimregex.com/' 'Vim Regex'

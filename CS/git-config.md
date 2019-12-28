@@ -36,6 +36,28 @@ $ vim <git-build-path>/gitconfig  # system config
 $ vim <project-path>/config  # local config
 ```
 
+### 使用代理加速代码传输速度
+
+1. 对 https 传输协议进行加速
+
+```bash
+git config --global http.https://github.com.proxy http://localhost:1080
+git config --global https.https://github.com.proxy http://localhost:1080
+```
+
+2. 对 git 协议进行加速
+
+编辑 `~/.ssh/config` 文件，添加 `ProxyCommand` 命令。
+connect.exe 文件需要自己下载，Windows中使用 `scoop`， 可以用 `scoop install connect` 进行安装。
+
+```cmd
+Host github.com
+	ProxyCommand connect.exe -S 127.0.0.1:1080 %h %p
+	HostName github.com
+	PreferredAuthentications publickey
+	IdentityFile C:\Users\liujh.BPG\.ssh\github_id_rsa
+```
+
 # &sect; Problem
 
 1. 域网络中，无法访问到配置文件
