@@ -88,6 +88,8 @@ s.match(/yes[^]*day/);
 
 ## &para; python
 
+详情参考 [Python 正则表达式操作](https://docs.python.org/zh-cn/3/library/re.html)
+
 ### 基本语法
 
 ```python
@@ -139,6 +141,8 @@ vim 中的正则表达式应用在符号上多用转义符[^2]。如 `+` &rarr; 
 ```
 
 ### &rArr; very magic 模式
+
+- vim 中 very magic 模式下，使用 `{-}` 表示非贪婪模式, 类似 Python 中的 `?`
 
 ```vim
 /\vmap.{-}\<Esc\>$  # 在 init.vim 中查找所有映射为 <Esc> 的按键
