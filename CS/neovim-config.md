@@ -48,6 +48,8 @@ neovim 文件配置地址
 > linux: `~/.config/nvim/init.vim`\
 > windows: `~/AppData/Local/nvim/init.vim`
 
+配置 init.vim 之后，需要先配置 vim-plug
+
 文件内容
 
 **!!! Attention: modify `let g:python3_host_prog='/python/executable/path'`**
