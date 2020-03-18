@@ -4,6 +4,10 @@
 
 # &sect; 计算机
 
+## &para; Windows
+
+- [包管理工具 Scoop](CS/scoop)
+
 ## &para; Python
 
 - [matplotlib 配置](CS/python/matplotlib)
