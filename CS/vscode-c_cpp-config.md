@@ -2,9 +2,7 @@
 
 > c, cpp, c++, vscode
 
-[toc]
-
-# &sect; vscode under linux
+# &sect; vscode on linux
 
 ## &para; manjaro deepin
 
@@ -43,3 +41,11 @@ C/C++ 配置 c_cpp_properties.json
     "version": 4
 }
 ```
+
+# &sect; vscode on Windows
+
+## &para; Problem
+
+1. "std" 没有成员 "cout"
+
+> 在 `Setting` -> `C_Cpp: Intelli Sense Engine` 中，改成 `Tag Parser`
