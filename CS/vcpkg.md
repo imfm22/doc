@@ -6,10 +6,11 @@
 
 ### &para; Windows
 
-因为国内网络问题, 如果出现下载出错问题, 可以更改环境变量中的 `HTTPS_PROXY` 值来加速下载
+因为国内网络问题, 如果出现下载出错问题, 可以更改环境变量中的 `HTTPS_PROXY/HTTP_PROXY` 值来加速下载
 
 ```powershell
 $env:HTTPS_PROXY="localhost:1080"
+$env:HTTP_PROXY="localhost:1080"
 
 # 下载 vcpkg 源码
 git clone https://github.com/Microsoft/vcpkg.git
@@ -23,18 +24,24 @@ cd vcpkg
 .\vcpkg integrate install
 ```
 
+> cmake 使用 vcpkg 需要在配置时添加选项(如下命令), 其中 vcpkg 的根目录根据自己的进行调整
+
+```powershell
+cmake -S. -Bbuild -DCMAKE_TOOLCHAIN_FILE=D:\vcpkg\scripts\buildsystems\vcpkg.cmake
+```
+
 > vcpkg 默认编译 x86 32 位的库, 可以添加环境变量\
 > `VCPKG_DEFAULT_TRIPLET=x64-windows`\
 > 此时默认编译 64 位的库
 
-或者使用显式命令
+> 或者使用显式命令
 
 ```powershell
 .\vcpkg install zlib:x64-windows
 .\vcpkg install zlib openssl --triplet x64-windows
 ```
 
-库安装及 PowerShell 命令提示添加
+> 库安装及 PowerShell 命令提示添加
 
 ```powershell
 # 包安装, 期间会下载绿色版 git 等软件
@@ -47,7 +54,9 @@ cd vcpkg
 echo "Import-Module 'D:/vcpkg/scripts/posh-vcpkg'" >> $PROFILE
 ```
 
-## 常用库的 cmake 包引用
+> **详细文档可以参考 vcpkg 根目录下的 doc 文件夹**
+
+## &sect; cmake find_package 配置
 
 - `sdl2`
 
