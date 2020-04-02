@@ -58,9 +58,23 @@ echo "Import-Module 'D:/vcpkg/scripts/posh-vcpkg'" >> $PROFILE
 
 ## &sect; cmake find_package 配置
 
-- `sdl2`
+- `libsvm: 323`
+
+```cmake
+find_package(unofficial-libsvm CONFIG REQUIRED)
+target_link_libraries(main PRIVATE unofficial::libsvm::libsvm)
+```
+
+- `sdl2: 2.0.10-3`
 
 ```cmake
 find_package(SDL2 CONFIG REQUIRED)
 target_link_libraries(main PRIVATE SDL2::SDL2 SDL2::SDL2main)
+```
+
+- `sqlite3: 3.32.1`
+
+```cmake
+find_package(sqlite3 CONFIG REQUIRED)
+target_link_libraries(main sqlite3)
 ```
